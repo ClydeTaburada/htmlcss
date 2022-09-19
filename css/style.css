@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+.page-wrapper {
+    max-width: 1024px;
+    background-color:#ffffff;
+    margin: 0px auto 60px auto;
+    padding: 0px 15px 15px 15px;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #ecc78f;
+}
+
+.banner {
+    height: 400px;
+    background-image: url(/htmlcss/image/background.webp);
+    background-size: cover;
+}
