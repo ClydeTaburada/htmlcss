@@ -3,6 +3,7 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 .page-wrapper {
     max-width: 1024px;
     background-color:#ffffff;
@@ -10,10 +11,11 @@ body {
     padding: 0px 15px 15px 15px;
 }
 
+
 header {
     height: 50px;
     width: 100%;
-    background-color: #f79f4d;
+    background-color: black;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -24,6 +26,7 @@ header {
     background-image: url('../image/1.jpg') ;
     background-size: cover;
     background-position: center;
+    margin-top: 60px;
 }
 
 h1 {
@@ -248,3 +251,64 @@ section.my-portfolio .d-flex p{
 .grid-area .item-9 {
     grid-area: 2 / 4 / 5 / 6;
 }
+
+/* Navbar */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+   
+ }
+
+ .navbar ul li:hover a{
+    
+    color: #f79f4d;
+ }
+
+ .navbar ul li:hover{
+    background-color: forestgreen;
+    color: #f79f4d;
+ }
+
+ .navbar ul li {
+    display: inline-block;
+    padding: 0 10px;
+
+ }
+
+ /* to make navbar responsive */
+ 
+ @media screen and (max-width: 992px ) {
+    
+    header {
+        height: auto;
+        background-color: gray;
+        position: absolute;
+    }
+
+    .banner {
+        margin-top: 280px;
+   
+    }
+
+    .navbar ul li {
+        display: block;
+    }
+    
+ }
+ 
+ /* to make the image diassappear when a  certain screen size applied */
+
+ @media screen and (max-width: 768px) {
+
+    .banner {
+        background-image: none;
+        background-color: #6b6967;
+
+    }
+ }
