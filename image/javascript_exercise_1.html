@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Odd or Even Checker</h1>
+    <input type="text" id="number" placeholder="Enter a number">
+    <button onclick="numberCheck()">Check</button>
+    <div id="result"></div>
+
+    <h1>Vowel or Consonant Checker</h1>
+    <input type="text" id="letter" placeholder="Enter a character" maxlength="1">
+    <button onclick="letterCheck()">Check</button>
+    <div id="result2"></div>
+
+
+    <script>
+        function numberCheck() {
+            let x = parseInt(document.getElementById('number').value);
+
+            if( x % 2 == 0) {
+                document.getElementById('result').innerHTML = "this number is a Even number";
+            } else {
+                document.getElementById('result').innerHTML = "this number is a Odd number";
+            }
+
+        }
+
+        function letterCheck() {
+            let y = (document.getElementById('letter').value).toLowerCase();
+      
+
+            if(y == 'a' || y == 'e' || y == 'i' || y == 'o' || y == 'u' ) {
+                document.getElementById('result2').innerHTML = "the letter is a vowel"
+            } else {
+                document.getElementById('result2').innerHTML = "the letter is a consonant"
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

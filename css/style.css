@@ -5,7 +5,7 @@ body {
 
 
 .page-wrapper {
-    max-width: 1024px;
+    max-width: 100%;
     background-color:#ffffff;
     margin: 0px auto 60px auto;
     padding: 0px 15px 15px 15px;
@@ -16,17 +16,18 @@ header {
     height: 50px;
     width: 100%;
     background-color: black;
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
 }
 
 .banner {
-    height: 400px;
+    height: 600px;
     background-image: url('../image/1.jpg') ;
     background-size: cover;
     background-position: center;
     margin-top: 60px;
+
 }
 
 h1 {
@@ -34,6 +35,7 @@ h1 {
     text-align: center;
     padding-top: 60px;
     font-size:46px ;
+    
    
 }
 
@@ -54,10 +56,10 @@ section.about-me {
     text-align: justify;
 }
 
-section.my-portfolio div{
+section.my-portfolio {
     background-color: rgb(243, 222, 162);
     border: 1px solid rgb(223, 222, 215);
-}
+} 
 
 .d-none{
     display: none;
@@ -253,32 +255,41 @@ section.my-portfolio .d-flex p{
 }
 
 /* Navbar */
-.navbar ul {
+.nav ul {
     list-style: none;
     margin: 0;
     
 }
-.navbar ul li a {
+.nav ul li a {
     text-decoration: none;
     color: white;
     line-height: 50px;
    
  }
 
- .navbar ul li:hover a{
+ .nav ul li:hover a{
     
     color: #f79f4d;
  }
 
- .navbar ul li:hover{
+ .nav ul li:hover{
     background-color: forestgreen;
     color: #f79f4d;
  }
 
- .navbar ul li {
+ .nav ul li {
     display: inline-block;
     padding: 0 10px;
 
+ }
+
+ .image {
+    position: absolute;
+    left: 850px;
+    border-radius: 20px;
+    box-shadow: 2px 2px gray;
+    
+   
  }
 
  /* to make navbar responsive */
@@ -296,7 +307,7 @@ section.my-portfolio .d-flex p{
    
     }
 
-    .navbar ul li {
+    .nav ul li {
         display: block;
     }
     
@@ -312,3 +323,31 @@ section.my-portfolio .d-flex p{
 
     }
  }
+
+ /* Educational Background Responsive */
+
+ @media screen and (max-width:768px) {
+    .work-education>.container>.row>.col {
+        display: none;
+    }
+
+    .work-education>.container>.row>.col.text-end,
+    .work-education>.container>.row>.col.order-last{
+        display: block;
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+
+    .col.text-end::after,
+    .col.order-last::after{
+        content: '';
+    }
+
+    .work-education>.container>.row>.col.text-end {
+        border-right:none;
+    }
+    
+    .work-education>.container>.row>.col.order-last {
+        border-left: none;
+    }
+}
