@@ -53,9 +53,9 @@
         <div id="result6"></div>
 
         <script>
-
+            // Determine the day off the date
             function getWeekDayName(e){
-                let date = new Date(e.currentTarget.value);
+                let date = new Date(e.currentTarget.value); // to get the current date
                 let day = date.getDay();
 
                 switch(day){
@@ -86,7 +86,7 @@
                 }
             }
             
-
+            // Calculator
             function doComputeValue(e){
                 
                 let operator = e.currentTarget.getAttribute("data-operator");
